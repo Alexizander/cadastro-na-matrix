@@ -1,0 +1,152 @@
+* {
+  margin: 0%;
+  padding: 0;
+}
+
+@keyframes matrixrain {
+  0% {
+      background-position: -100% -100%;
+  }
+  100% {
+      background-position: 300% 300%;
+  }
+}
+
+@keyframes scrollvertical {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 0% 500%;
+  }
+}
+
+.matrix:nth-child(odd) {
+    background: linear-gradient(to right, rgb(0, 0, 0), green 100%, rgba(0, 0, 0, 0));;
+    background-size: 80% 40%;
+    animation: matrixrain 5s linear infinite;
+    -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;    
+}
+.matrix:nth-child(even) {
+    background: linear-gradient(to left, rgb(0, 0, 0), green 100%, rgba(0, 0, 0, 0));;
+    background-size: 80% 40%;
+    animation: matrixrain 5s linear infinite reverse;
+    -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;   
+}
+
+#raintitle {
+  transform: rotate(90);
+  font-size: 90px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+  text-shadow: 2px black;
+  background: linear-gradient(to bottom, black, black, black, green);
+  background-size: 80% 200%;
+  animation: matrixrain 10s linear infinite reverse;
+  -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;   
+}
+
+h3 {
+  font-weight: 500;
+  margin-left: 10%;
+  text-shadow: 2px black;
+}
+
+fieldset {
+  border: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 7%;
+  background-color: black;
+  background-image: linear-gradient(to bottom, black, black, black, rgb(0, 24, 0));
+  background-attachment: fixed;
+  color: rgb(0, 189, 142);
+}
+.back1 {
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+
+  color: rgb(0, 255, 242);
+}
+
+input, select, textarea, button {
+  border-radius: 5px;
+}
+
+.field {
+  margin-bottom: 1em;
+  background: black;
+}
+
+.field label {
+  margin-bottom: 0.2em;
+  color: green;
+  display: block;
+
+}
+
+.group {
+  margin-left: 29%;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+fieldset.group .field {
+  border-radius: 5px;
+  border: 2px solid #73AD21;
+  float: left;
+  background: rgba(0, 32, 0, 0.473);
+  margin-right: 1em;
+  color: cyan;
+  animation: scrollvertical 2s linear infinite;
+}
+
+.field input[type="text"], .field input[type="email"], .field select, .field textarea {
+  padding: 0.2em;
+  border: 1px solid darkcyan;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
+  display: block;
+}
+
+.field select option {
+  padding-right: 1em;
+}
+
+.field input:focus, .field select:focus, .field textarea:focus {
+  background: rgb(70,100,70,100);
+}
+
+.button {
+  font-size: 1.2em;
+  background: rgb(0, 145, 145);
+  border: 0;
+  margin-bottom: 1em;
+  color: rgb(0, 255, 42);
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.519);
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin-right: 95%;
+  transform: translate(-40% -50%);
+}
+
+.button:hover {
+  color: black;
+  background: cyan;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.219);
+  text-shadow: none;
+}
+
+#check {
+  display: inline-block;
+}
